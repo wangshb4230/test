@@ -1,0 +1,132 @@
+@charset "UTF-8";
+/*删格系统*/ 
+$gutter: 10px; // 间隔
+$columns: 24; //列数
+$md-screen: 1400px; //中屏幕尺寸
+$lg-screen: 1800px; //中屏幕尺寸
+%col{
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding-right: $gutter/2;
+  padding-left: $gutter/2;
+}
+
+%col-md{
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding-right: $gutter/2;
+  padding-left: $gutter/2;
+}
+
+@mixin make-col($num){
+  @for $num from 1 through $columns{
+    .col-#{$num}{
+      @extend %col;
+      width: percentage(($num / $columns));
+    }
+  }
+}
+
+@mixin make-col-md($num){
+  @media (min-width: $md-screen){
+    @for $num from 1 through $columns{
+      .col-md-#{$num}{
+        width: percentage(($num / $columns));
+      }
+    }
+  }
+}
+
+@mixin make-col-lg($num){
+  @media (min-width: $lg-screen){
+    @for $num from 1 through $columns{
+      .col-lg-#{$num}{
+        width: percentage(($num / $columns));
+      }
+    }
+  }
+}
+
+// 外层
+.container {
+  padding-right: $gutter/2;
+  padding-left: $gutter/2;
+  margin-right: auto;
+  margin-left: auto;
+  .container-pt{
+    padding-top: $gutter;
+  }
+  .container-padding{
+    padding: $gutter;
+  }
+}
+
+
+//行-有间隔
+.row{
+  margin-left: -$gutter/2;
+  margin-right: -$gutter/2;
+  @include clearfix;
+}
+//列
+@include make-col($columns);
+@include make-col-md($columns);
+@include make-col-lg($columns);
+
+//行-无间隔
+.row-no-gap{
+  margin-left: 0;
+  margin-right: 0;
+  @for $num from 1 through $columns{
+    .col-#{$num}{
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+//列偏移
+@for $num from 0 through $columns{
+  .col-offset-#{$num}{
+    margin-left: percentage(($num / $columns));
+  }
+}
+@media (min-width: $md-screen){
+  @for $num from 0 through $columns{
+    .col-md-offset-#{$num}{
+      margin-left: percentage(($num / $columns));
+    }
+  }
+}
+@media (min-width: $lg-screen){
+  @for $num from 0 through $columns{
+    .col-lg-offset-#{$num}{
+      margin-left: percentage(($num / $columns));
+    }
+  }
+}
+
+//显示隐藏等
+.visible-md-block,
+.visible-lg-block{
+  display: none;
+}
+@media (min-width: $md-screen){
+  .hide-md {
+    display: none !important;
+  } 
+  .visible-md-block {
+    display: block !important;
+  }
+}
+
+@media (min-width: $lg-screen){
+  .hide-lg {
+    display: none !important;
+  } 
+  .visible-lg-block {
+    display: block !important;
+  }
+}

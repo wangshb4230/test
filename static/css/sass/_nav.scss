@@ -1,0 +1,118 @@
+@charset "UTF-8";
+$navHeight: 40px;
+/*导航*/
+.nav{
+  height: $navHeight;
+  background: $color-primary;
+  position: relative;
+  z-index: 800;
+  a{
+    color: #fff;
+  }
+} 
+.nav-list{
+  width: 100%;
+  text-align: center;
+  font-size: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  >li{
+    display: inline-block;
+    position: relative;
+    font-size: $size;
+    height: $navHeight;
+    line-height: $navHeight;
+    width: 120px;
+    text-align: center;
+    transition: .3s linear background;
+    color: #fff;
+    cursor: pointer;
+    &:hover{
+      background: #0068B6;
+    }
+    &:hover{
+      .list-sub{
+        // display: block;
+        visibility: visible;
+      }
+    }
+  }
+  
+  .icon{
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  span{
+    vertical-align: middle;
+  }
+  .is-active{
+    >a{
+      background: #0068B6;
+    }
+  }
+  .list-sub{
+    position: absolute;
+    left: 0;
+    top: 100%;
+    min-width: 120px;
+    // border: 1px solid #C6DCE3;
+    font-size: $size;
+    background: #fff;
+    text-align: left;
+    display: flex;
+    color: $color;
+    box-shadow: 0 3px 10px rgba(68,143,238,.4);
+    visibility: hidden;
+    // li{
+    //   display: block;
+    //   border-bottom: 1px solid $color-border;
+    //   &:last-child{
+    //     border-bottom: none;
+    //   }
+    //   height: 36px;
+    //   line-height: 36px;
+    //   color: $color;
+    //   padding: 0 20px;
+    //   white-space: nowrap;
+    //   transition: .3s linear all;
+    //   &:hover{
+    //     background: rgba(#0091DA,.1);
+    //   }
+    // }
+
+    dd{
+      white-space: nowrap;
+    }
+  }
+  .list-sub-item{
+    width: 120px;
+    text-align: center;
+    border-left: 1px solid #C6DCE3;
+    border-bottom: 1px solid #C6DCE3;
+    border-right: 1px solid #C6DCE3;
+    line-height: 32px;
+    margin-right: -1px;
+    a{
+      color: $color;
+      &:hover{
+        color: $color-primary;
+      }
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+    dt{
+      color: $color-lighter;
+      border-bottom: 1px solid $color-border-light;
+    }
+    dd{
+      height: 32px;
+      line-height: 32px;
+      @include ellipsis;
+      &:hover{
+        background: rgba(#0091DA,.1);
+      }
+    }
+  }
+}

@@ -1,0 +1,133 @@
+@charset "UTF-8";
+$headerHeight: 30px;
+/*头部*/
+.header{
+  height: $headerHeight;
+  line-height: $headerHeight;
+  padding: 0 $num;
+  position: relative;
+  z-index: 900;
+} 
+.logo{
+  float: left;
+  height: $headerHeight;
+  font-size: 16px;
+  font-weight: 500;
+  i{
+    float: left;
+    width: 30px;
+    height: 18px;
+    background: url(../images/logo.png);
+    background-size: 100% 100%;
+    margin: 6px 10px 0 0;
+  }
+}
+.header-right{
+  float: right;
+  color: $color-light;
+}
+.header-system{
+  float: left;
+  position: relative;
+  &:hover{
+    .system-bd{
+      display: block;
+    }
+  }
+  .system-hd{
+    height: $headerHeight;
+    cursor: pointer;
+  }
+  .system-icon{
+    font-size: 14px;
+    color: $color-lighter;
+    vertical-align: middle;
+  }
+  .system-name{
+    margin: 0 5px 0 10px;
+    
+  }
+  .system-arw{
+    color: $color-lighter;
+    font-size: 14px;
+  }
+  .system-bd{
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    border: 1px solid #C6DCE3;
+    background: #fff;
+    border-bottom: none;
+    transform: translateX(-50%);
+    display: none;
+  }
+  .system-arrow{
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    margin-left: -6px;
+    width: 12px;
+    height: 6px;
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include arrow(top,6px,#C6DCE3);
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      top: 1px;
+      left: 0;
+      @include arrow(top,6px,#fff);
+    }
+  }
+  .system-list{
+    li{
+      color: $color-light;
+      
+      border-bottom: 1px solid #C6DCE3;
+    }
+    a{
+      display: block;
+      padding: 0 10px;
+      height: 28px;
+      line-height: 28px;
+      white-space: nowrap;
+    }
+    .icon{
+      font-size: 16px;
+      margin-right: 8px;
+    }
+  }
+}
+.header-user{
+  float: left;
+  margin-left: $num;
+  height: $headerHeight;
+  line-height: 22px;
+  padding:$headerHeight/2 - 22/2 0;
+  a{
+    color: $color-light;
+    &:hover{
+      color: $color-primary;
+    }
+  }
+  .user-avatar{
+    float: left;
+    img{
+      display: block;
+      width: 22px;
+      height: 22px;
+      border-radius: 100%;
+    }
+  }
+  .user-name{
+    float: left;
+    margin: 0 $num;
+  }
+  .user-text{
+    float: left;
+  }
+}

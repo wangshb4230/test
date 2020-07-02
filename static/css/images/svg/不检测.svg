@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="9px" height="9px" viewBox="0 0 9 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+    <title>不检测</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="实时监测-实时一览-实时数据" transform="translate(-1021.000000, -267.000000)" fill="#333333" fill-rule="nonzero">
+            <g id="编组-11" transform="translate(930.000000, 262.000000)">
+                <g id="编组-10" transform="translate(87.000000, 2.000000)">
+                    <g id="不检测" transform="translate(4.000000, 3.000000)">
+                        <path d="M4.5,2.23606798 L1.61803399,8 L7.38196601,8 L4.5,2.23606798 Z M4.76832816,0.536656315 L8.78291796,8.56583592 C8.85701474,8.71402947 8.79694743,8.89423138 8.64875388,8.96832816 C8.60709725,8.98915647 8.56116333,9 8.5145898,9 L0.485410197,9 C0.319724772,9 0.185410197,8.86568542 0.185410197,8.7 C0.185410197,8.65342647 0.196253724,8.60749255 0.217082039,8.56583592 L4.23167184,0.536656315 C4.30576862,0.388462765 4.48597053,0.328395461 4.63416408,0.402492236 C4.6922223,0.431521346 4.73929905,0.478598094 4.76832816,0.536656315 Z" id="三角形"></path>
+                        <polygon id="路径" points="1 8 1 7 8 7 8 8"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

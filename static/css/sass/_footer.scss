@@ -1,0 +1,11 @@
+@charset "UTF-8";
+.footer{
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: $color-lighter;
+  font-size: 12px;
+  span{
+    margin: 0 5px;
+  }
+}
